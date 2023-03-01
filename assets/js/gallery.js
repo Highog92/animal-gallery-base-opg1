@@ -16,21 +16,36 @@ window.addEventListener("load", initApp);
 
 function initApp() {
     fetchData(); // starter hentning af data. 
-    myApp = document.getElementById('app'); // vi finder det tag voress app skal leve i. kaldet app
+    myApp = document.getElementById('app'); // vi finder det tag voress app skal leve i, kaldet app.
     createLoadingScreen(); // bygger loading screen i DOM.
 }
 
 
 function createLoadingScreen() {
+    let loading = document.createElement('h2')
+    loading.innerText = 'loading';
+
+    app.appendChild(loading)
     // byg loading screen her med html dom elementer. og evt et animeret gif eller billede. i vores app tag.
 
 }
 
 
 function initGallery(dataRecived) {
+    myData = dataRecived;
+    
+
+    let name = myNumbers.map((dataRecived) => {
+        return name * 1;
+    });
+    
+    let myLastNumbers = myNumbers.map((x) => {
+        return x * 12
+    });
+
     // kaldes fra fetchData når data er klar. 
     // set myData variablen til det modtagne data, så det er tilgængelig for alle funktioner
-    //kald funktionen resetGallery for at slette indhold i app tagget, som er indeholdt i myApp.
+    // kald funktionen resetGallery for at slette indhold i app tagget, som er indeholdt i myApp.
     // kald en funktion der kan bygge dit galleri. den hedder buildGallery
 
 }
